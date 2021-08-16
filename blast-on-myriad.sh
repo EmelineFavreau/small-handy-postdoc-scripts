@@ -21,6 +21,10 @@
 
 module load blast+/2.2.30/intel-2015-update2
 
+# Make database from fly
+makeblastdb -in inputOnScratch/Drosophila_melanogaster.faa \
+	-parse_seqids \
+	-dbtype prot
 
 # Blast species against fly
 blastp -query inputOnScratch/Polistes_dominula-longest-isoforms.faa \
