@@ -10,3 +10,8 @@ done
 while read orthogroup; do
    test -f result/calculating-dnds/branch-model/${orthogroup} || echo $orthogroup
 done < tmp/aligned-orthogroups
+
+
+# Check many text files for the presence of a given string
+# print files that do not have this stringI know some orthogroups have not finished their dnds 
+grep -L "Time used" result/calculating-dnds/branch-model/${species}/M2-*
